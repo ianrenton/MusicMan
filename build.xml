@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="MusicMan" default="default" basedir=".">
+    <description>Builds, tests, and runs the project MusicMan.</description>
+    <import file="nbproject/build-impl.xml"/>
+        <target name="-post-jar">
+            <copy overwrite="true" tofile="${dist.dir}/README.TXT" file="${basedir}/includes/README.TXT" />
+            <copy overwrite="true" tofile="${dist.dir}/LICENCE.TXT" file="${basedir}/includes/LICENCE.TXT" />
+            <zip destfile="${basedir}/MusicMan.zip">
+                <zipfileset dir="${basedir}/dist" prefix="MusicMan" />
+            </zip>
+        </target>
+
+        <target name="-post-clean">
+            <delete file="${basedir}/directories.bin" />
+            <delete file="${basedir}/library.bin" />
+            <delete file="${basedir}/MusicMan.zip" />
+            <delete file="${basedir}/MusicMan-src.zip" />
+            <zip destfile="${basedir}/MusicMan-src.zip">
+                <zipfileset dir="${basedir}" prefix="MusicMan" />
+            </zip>
+        </target>
+</project>
