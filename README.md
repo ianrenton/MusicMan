@@ -11,4 +11,4 @@ MusicMan is early alpha software.  Lots of things (e.g. playlists, Shoutcast) do
 
 MusicMan requires Java 6, and runs on Windows, Mac and Linux.  It is released under the terms of the BSD licence.  It uses the free [MP3SPI](http://www.javazoom.net/mp3spi/mp3spi.html), [JLayer](http://www.javazoom.net/javalayer/javalayer.html) and [JAudioTagger](http://www.jthink.net/jaudiotagger) libraries.
 
-You can [download MusicMan here](http://www.onlydreaming.net/files/MusicMan/MusicMan.zip) (Extract ZIP, run MusicMan.jar)
+You can [download MusicMan here](https://github.com/ianrenton/MusicMan/files/702946/MusicMan.zip) (Extract ZIP, run MusicMan.jar)
